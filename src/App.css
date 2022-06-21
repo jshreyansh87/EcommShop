@@ -19,7 +19,7 @@
   align-items: center;
   transition: 0.6s;
   padding: 40px 100px;
-  z-index: 10000;
+  z-index: 1;
   background: #000;     /* Changes here */
 }
 
@@ -67,6 +67,53 @@
   transition: 0.6s;
 }
 
+.NavbarToggleMenu{
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .Navbar header{
+    padding: 20px 40px;
+  }
+  .Navbar header ul{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left bottom, #44474e, #36353b, #272528, #181617, #000000);
+    z-index: 100;
+    transition: 0.6s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Navbar header ul.active{
+    display: flex;
+  }
+  .Navbar header ul li a{
+    /* position: relative; */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 35px;
+    transition: 0.6s;
+    /* margin-left: 0; */
+
+  }
+  .NavbarToggleMenu{
+    display: flex;
+    position: fixed;
+    right: 20px;
+    color: #fff;
+    background-position: center;
+    cursor: pointer;
+    z-index: 101;
+  }
+}
+
 
 /*  ------------------- Silder -------------------  */
 
@@ -76,8 +123,8 @@
   width: 100%;
   height: 100vh;
   background: url(https://www.sizescreens.com/wp-content/uploads/2020/02/Samsung-Galaxy-Z-Flip-11.jpg);
-  background-size: cover;
-  /* background-size: contain; */
+  /* background-size: cover; */
+  background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
