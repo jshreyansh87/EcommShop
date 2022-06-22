@@ -36,14 +36,14 @@ const Navbar = () => {
 
                 
                 {/* -------------- Make changes in the search and implement the mobile view as well -------------- */}
-                <FormControl fullWidth sx={{ m: 1, background: '#adacaa', borderRadius: '50px', marginLeft: '7%', width: '50%', border: 'none' }}>
+                {/* <FormControl fullWidth sx={{ m: 1, background: '#adacaa', borderRadius: '50px', marginLeft: '7%', width: '50%', border: 'none' }}>
                     <OutlinedInput
                         id="outlined-adornment-amount"
                         placeholder='Search for products, brands and more'
                         startAdornment={<InputAdornment position="start"> <SearchIcon /> </InputAdornment>}
                         label="Amount"
                     />
-                </FormControl>
+                </FormControl> */}
 
 
                 <div className='NavbarToggleMenu'><MenuIcon fontSize="large" onClick={handleToggleMenu} /></div>

@@ -1,14 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* background: rgb(94, 44, 44); */
-  max-height: 100vh;  /* changes here */
+  max-height: 100vh;
+  /* changes here */
 }
 
 /*  ------------------- NavBar -------------------  */
 
-.Navbar header{
+.Navbar header {
   /* position: sticky; */
   position: fixed;
   top: 0;
@@ -20,20 +21,21 @@
   transition: 0.6s;
   padding: 40px 100px;
   z-index: 1;
-  background: #000;     /* Changes here */
+  background: #000;
+  /* Changes here */
 }
 
-.Navbar header.sticky{
+.Navbar header.sticky {
   padding: 5px 100px;
   background: #fff;
 }
 
 .Navbar header.sticky .logo,
-.Navbar header.sticky ul li a{
+.Navbar header.sticky ul li a {
   color: #000;
 }
 
-.Navbar header .logo{
+.Navbar header .logo {
   position: relative;
   font-weight: 700;
   color: #fff;
@@ -44,20 +46,20 @@
   transition: 0.6s;
 }
 
-.Navbar header ul{
+.Navbar header ul {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Navbar header ul li{
+.Navbar header ul li {
   position: relative;
   list-style: none;
   /* transition: 0.6s; */
 }
 
-.Navbar header ul li a{
+.Navbar header ul li a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
@@ -67,15 +69,16 @@
   transition: 0.6s;
 }
 
-.NavbarToggleMenu{
+.NavbarToggleMenu {
   display: none;
 }
 
 @media (max-width: 991px) {
-  .Navbar header{
+  .Navbar header {
     padding: 20px 40px;
   }
-  .Navbar header ul{
+
+  .Navbar header ul {
     position: fixed;
     top: 0;
     left: 0;
@@ -89,10 +92,12 @@
     align-items: center;
     flex-direction: column;
   }
-  .Navbar header ul.active{
+
+  .Navbar header ul.active {
     display: flex;
   }
-  .Navbar header ul li a{
+
+  .Navbar header ul li a {
     /* position: relative; */
     margin: 0 15px;
     text-decoration: none;
@@ -103,7 +108,8 @@
     /* margin-left: 0; */
 
   }
-  .NavbarToggleMenu{
+
+  .Navbar .NavbarToggleMenu {
     display: flex;
     position: fixed;
     right: 20px;
@@ -112,12 +118,208 @@
     cursor: pointer;
     z-index: 101;
   }
+
+  .Navbar header.sticky .NavbarToggleMenu {
+    color: #000;
+  }
+}
+
+/*  ------------------- Footer -------------------  */
+
+.Footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  /* margin-top: 8%; */
+  min-height: 100vh;
+  /* background: #ede7f6; */
+}
+
+.Footer footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Footer footer .FooterContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.Footer footer .FooterContainer .FooterSection {
+  margin-right: 30px;
+}
+
+.Footer footer .FooterContainer .FooterSection.AboutUs {
+  width: 40%;
+}
+
+.Footer footer .FooterContainer h2 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.Footer footer .FooterContainer h2:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+
+.Footer footer p {
+  color: #999;
+}
+
+.Footer .SocialMedia {
+  margin-top: 20px;
+  display: flex;
+}
+
+.Footer .SocialMedia li {
+  list-style: none;
+}
+
+.Footer .SocialMedia li a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.Footer .SocialMedia li a:hover {
+  background: #f00;
+}
+
+.Footer .QuickLinks {
+  position: relative;
+  width: 25%;
+}
+
+.Footer .QuickLinks ul li {
+  list-style: none;
+}
+
+.Footer .QuickLinks ul li a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.Footer .QuickLinks ul li a:hover {
+  color: #fff;
+}
+
+.Footer .Contact {
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.Footer .Contact .FooterInfo {
+  position: relative;
+}
+
+.Footer .Contact .FooterInfo li {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.Footer .Contact .FooterInfo li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.Footer .Contact .FooterInfo li span {
+  color: #999;
+}
+
+.Footer .Contact .FooterInfo li a {
+  color: #999;
+  text-decoration: none;
+}
+
+.Footer .Contact .FooterInfo li a:hover {
+  color: #fff;
+}
+
+.Footer .FooterCopyRight {
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+
+@media (max-width: 991px) {
+  .Footer footer {
+    padding: 40px;
+  }
+
+  .Footer footer .FooterContainer {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    flex-direction: column;
+  }
+
+  /* .Footer footer .FooterContainer {
+    flex-direction: column;
+  } */
+
+  .Footer footer .FooterContainer .FooterSection {
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
+
+  .Footer footer .FooterContainer .FooterSection.AboutUs {
+    width: 100%;
+  }
+
+  .Footer .QuickLinks {
+    position: relative;
+    width: 100%;
+  }
+
+  .Footer .Contact {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+
+  /* .Footer footer .FooterContainer .FooterSection.FooterSection.AboutUs,
+  .QuickLinks,
+  .Contact {
+    width: 100%;
+  } */
+
+  .Footer .FooterCopyRight {
+    padding: 8px 40px;
+  }
 }
 
 
 /*  ------------------- Silder -------------------  */
 
-.Banner{
+.Banner {
   position: relative;
   margin-top: 8%;
   width: 100%;
