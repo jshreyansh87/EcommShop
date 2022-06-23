@@ -1,10 +1,10 @@
 import React from 'react'
-import Banner from './Utils/Banner'
+import Carousel from './Utils/Carousel'
 
 const Home = ({ name }) => {
     return (
         <div className='Home' >
-            <Banner />
+            <Carousel />
             
             <h2 style={{textAlign: 'center', fontSize: '40px'}}>{name}</h2>
 

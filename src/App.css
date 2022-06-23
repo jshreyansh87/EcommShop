@@ -7,6 +7,23 @@
   /* changes here */
 }
 
+/*  ------------------- Scroll Bar -------------------  */
+
+::-webkit-scrollbar {
+  width: 11px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: #282f4e;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454f6b;
+}
+
 /*  ------------------- NavBar -------------------  */
 
 .Navbar header {
@@ -18,10 +35,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.6s;
+  transition: 0.6s ease;
   padding: 40px 100px;
-  z-index: 1;
+  z-index: 1000;
   background: #000;
+  /* height: calc(5rem + 1rem); */
   /* Changes here */
 }
 
@@ -56,7 +74,7 @@
 .Navbar header ul li {
   position: relative;
   list-style: none;
-  /* transition: 0.6s; */
+  transition: 0.6s;
 }
 
 .Navbar header ul li a {
@@ -317,17 +335,162 @@
 }
 
 
-/*  ------------------- Silder -------------------  */
+/*  ------------------- Carousel Silder -------------------  */
 
-.Banner {
-  position: relative;
+.Carousel {
   margin-top: 8%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.Carousel .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.Carousel .swiper-slide {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: url(https://www.sizescreens.com/wp-content/uploads/2020/02/Samsung-Galaxy-Z-Flip-11.jpg);
-  /* background-size: cover; */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.Carousel .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.Carousel .swiper-slide .swiperTextContent {
+  position: absolute;
+  top: 25%;
+  color: #fff;
+  margin: 0 200px;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.Carousel .swiper-slide .swiperTextContent .darkLayer:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Carousel .swiper-slide .swiperTextContent .swiperTextTitle {
+  font-size: 3em;
+  font-weight: 700;
+  text-shadow: 0 5pc rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+.Carousel .swiper-slide-active .swiperTextContent .swiperTextTitle {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 1s ease;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.Carousel .swiper-slide .swiperTextContent .swiperTextTitle span {
+  font-size: 0.4em;
+  font-weight: 500;
+}
+
+.Carousel .swiper-slide .swiperTextContent p {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+.Carousel .swiper-slide-active .swiperTextContent p {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 1s ease;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.Carousel .swiper-slide .swiperTextContent .swiperContentBtn {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #000;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 8px 25px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  bottom: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.Carousel .swiper-slide-active .swiperTextContent .swiperContentBtn {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 1s ease;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.Carousel .swiper-slide .swiperTextContent .swiperContentBtn .swiperContentBtnArrow {
+  font-size: 1.6em;
+  transition: 0.3s ease;
+}
+
+.Carousel .swiper-slide .swiperTextContent .swiperContentBtn:hover .swiperContentBtnArrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 991px) {
+  .Carousel .swiper-slide .swiperTextContent {
+    margin: 0 70px 0 20px;
+  }
+
+  .Carousel .swiper-slide .swiperTextContent .swiperTextTitle {
+    font-size: 2em;
+  }
+
+  .Carousel .swiper-slide .swiperTextContent .swiperTextTitle span {
+    font-size: 0.45em;
+  }
+
+  .Carousel .swiper-slide .swiperTextContent p {
+    font-size: 0.9em;
+  }
 }
