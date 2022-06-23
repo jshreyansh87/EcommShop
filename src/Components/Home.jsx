@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from './Assets/Banner'
+import Banner from './Utils/Banner'
 
 const Home = ({ name }) => {
     return (
