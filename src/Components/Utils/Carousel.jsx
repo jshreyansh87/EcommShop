@@ -15,7 +15,8 @@ const Carousel = () => {
     <div className='Carousel'>
       <Swiper
         slidesPerView={1}
-        spaceBetween={10}
+        spaceBetween={2}
+        speed={2000}
         loop={true}
         centeredSlides={true}
         autoplay={{
@@ -53,6 +54,16 @@ const Carousel = () => {
             <Button variant="contained" className="swiperContentBtn">Shop Now <ArrowForwardIcon className="swiperContentBtnArrow" /></Button>
           </div>
         </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://wallpaperaccess.com/full/5092919.jpg" />
+          <div className="swiperTextContent darkLayer">
+            <h2 className="swiperTextTitle">Sports Shoes <span>End of Season Sale!!!</span></h2>
+            <p>Starting from only<br /> Rs499 <br /> Free Delivery on First Order*</p>
+            <Button variant="contained" className="swiperContentBtn">Shop Now <ArrowForwardIcon className="swiperContentBtnArrow" /></Button>
+          </div>
+        </SwiperSlide>
+
       </Swiper>
     </div>
   )
