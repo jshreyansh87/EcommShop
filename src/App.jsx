@@ -1,9 +1,14 @@
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from './Components/Utils/Navbar';
 import Home from './Components/Home';
-
-import { Routes, Route } from "react-router-dom";
 import Footer from './Components/Utils/Footer';
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 function App() {
   return (
