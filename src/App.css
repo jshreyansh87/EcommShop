@@ -478,6 +478,11 @@
 }
 
 @media (max-width: 991px) {
+  .Carousel {
+    margin-top: 8%;
+    max-height: 100vh;
+    position: relative;
+  }
   .Carousel .swiper-slide .swiperTextContent {
     margin: 0 70px 0 20px;
   }
@@ -493,4 +498,114 @@
   .Carousel .swiper-slide .swiperTextContent p {
     font-size: 0.9em;
   }
+}
+
+/*  ------------------- Home Page -------------------  */
+
+.Home{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.Home h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+.Home .List{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.Home .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.Home .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.Home .swiper-slide img {
+  display: block;
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+}
+
+/*  ------------------- Home Item Card -------------------  */
+
+.CategoryCard{
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.CategoryCard:hover{
+  height: 420px;
+}
+
+.CategoryCard .CategoryCardImg{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  
+}
+
+.CategoryCard .CategoryCardImg .CategoryCardImgSrc{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.CategoryCard .CategoryCardContent{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.CategoryCard:hover .CategoryCardContent{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
 }
