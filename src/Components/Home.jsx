@@ -3,7 +3,7 @@ import Carousel from './Utils/Carousel'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper";
-import HomeItemCard from './Cards/HomeItemCard';
+import HomeCategoryCard from './Cards/HomeCategoryCard';
 
 const Home = ({ name }) => {
 
@@ -29,7 +29,7 @@ const Home = ({ name }) => {
                 <div className="List">
                     {
                         categoryList.map((item, i) => (
-                            <HomeItemCard key={i} title={item.title} body={item.body} imgSrc={item.imgSrc} />
+                            <HomeCategoryCard key={i} title={item.title} body={item.body} imgSrc={item.imgSrc} />
                         ))
                     }
                 </div>
@@ -38,7 +38,7 @@ const Home = ({ name }) => {
                 <div className="List">
                     <Swiper
                         slidesPerView={'5'}
-                        spaceBetween={10}
+                        spaceBetween={50}
                         navigation={true}
                         freeMode={true}
                         modules={[FreeMode, Navigation]}
