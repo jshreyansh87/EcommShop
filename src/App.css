@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background: rgb(94, 44, 44); */
   max-height: 100vh;
   /* changes here */
 }
@@ -45,7 +44,7 @@
 
 .Navbar header.sticky {
   padding: 5px 100px;
-  background: #fff;
+  background: rgb(225, 221, 221);
 }
 
 .Navbar header.sticky .logo,
@@ -131,6 +130,7 @@
     display: flex;
     position: fixed;
     right: 20px;
+    /* right: 3%; */
     color: #fff;
     background-position: center;
     cursor: pointer;
@@ -149,9 +149,6 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  margin-top: 30%;
-  /* min-height: 100vh; */
-  /* background: #ede7f6; */
 }
 
 .Footer footer {
@@ -493,6 +490,7 @@
     max-height: 100vh;
     position: relative;
   }
+
   .Carousel .swiper-slide .swiperTextContent {
     margin: 0 70px 0 20px;
   }
@@ -512,65 +510,102 @@
 
 /*  ------------------- Home Page -------------------  */
 
-.Home{
-  margin-top: 5%;
-  margin-bottom: 5%;
+.Home {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  max-height: fit-content;
 }
 
-.Home h2{
+.Home h2 {
   text-align: center;
   font-size: 30px;
-  /* margin-top: 10%; */
 }
 
-.Home .List{
+.Home .List {
   position: relative;
+  top: 0;
   width: 100%;
+  max-height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 30px;
-  /* margin-bottom: 10%; */
 }
 
 .Home .swiper {
   width: 100%;
   height: 100%;
-  /* padding-left: 50px;
-  padding-right: 50px; */
+  border-radius: 15px;
 }
 
 .Home .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.Home .swiper-slide img {
-  display: block;
-  width: 260px;
-  height: 260px;
-  object-fit: contain;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.05);
 }
 
 /*  ------------------- Home Item Card -------------------  */
 
-.CategoryCard{
+.HomeItemCard {
+  box-shadow: 0 0 10px 5px #e1e5ee;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 18rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.HomeItemCard .HomeItemCardImg {
+  object-fit: contain;
+  height: 14rem;
+}
+
+.HomeItemCard .HomeItemCardBody {
+  margin: 1rem;
+  flex-grow: 1;
+}
+
+.HomeItemCard .HomeItemCardBody .HomeItemCardTitle {
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.HomeItemCard .HomeItemCardBody .HomeItemCardDesc {
+  line-height: 1.2rem;
+}
+
+.HomeItemCard .HomeItemCardBody .HomeItemCardPrice {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+
+}
+
+.HomeItemCard .HomeItemCardBody .HomeItemCardBtn {
+  border: none;
+  border-top: 1px solid #e1e5ee;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  color: inherit;
+  width: 100%;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.HomeItemCard .HomeItemCardBody .HomeItemCardBtn:hover {
+  color: #0e48fe;
+}
+
+/*  ------------------- Home Category Card -------------------  */
+
+.CategoryCard {
   position: relative;
   max-width: 300px;
   height: 215px;
@@ -584,11 +619,11 @@
   cursor: pointer;
 }
 
-.CategoryCard:hover{
-  height: 300px;
+.CategoryCard:hover {
+  height: 350px;
 }
 
-.CategoryCard .CategoryCardImg{
+.CategoryCard .CategoryCardImg {
   position: relative;
   width: 260px;
   height: 260px;
@@ -597,16 +632,16 @@
   margin-right: auto;
   z-index: 1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  
+
 }
 
-.CategoryCard .CategoryCardImg .CategoryCardImgSrc{
+.CategoryCard .CategoryCardImg .CategoryCardImgSrc {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
 
-.CategoryCard .CategoryCardContent{
+.CategoryCard .CategoryCardContent {
   position: relative;
   margin-top: -140px;
   padding: 10px 15px;
@@ -617,7 +652,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.CategoryCard:hover .CategoryCardContent{
+.CategoryCard:hover .CategoryCardContent {
   visibility: visible;
   opacity: 1;
   margin-top: -40px;

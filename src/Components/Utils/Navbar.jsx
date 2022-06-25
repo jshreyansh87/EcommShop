@@ -48,7 +48,7 @@ const Navbar = () => {
 
                 <div className='NavbarToggleMenu'><MenuIcon fontSize="large" onClick={handleToggleMenu} /></div>
                 <ul>
-                    <li> <Link to='/about'>About</Link> </li>
+                    <li> <Link to='/about'>Categories</Link> </li>
                     <li> <Link to='/wishlist'> Wishlist </Link> </li>
                     <li> <Link to='/cart'>Cart</Link> </li>
                     <li> <Link to='/profile'>Profile</Link> </li>
