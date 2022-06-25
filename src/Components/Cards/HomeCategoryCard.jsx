@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const HomeItemCard = ({title, body, imgSrc}) => {
+const HomeCategoryCard = ({title, body, imgSrc}) => {
     return (
         <div className="CategoryCard">
             <div className="CategoryCardImg"><img className='CategoryCardImgSrc' src={`${imgSrc}`}  ></img></div>
@@ -13,4 +13,4 @@ const HomeItemCard = ({title, body, imgSrc}) => {
     )
 }
 
-export default HomeItemCard
+export default HomeCategoryCard
