@@ -55,7 +55,20 @@ const Home = ({ name }) => {
                 <h2>Today's Deals</h2>
                 <div className="List">
                     <Swiper
-                        slidesPerView={'4'}
+                        breakpoints={{
+                            350: {
+                                slidesPerView: 1
+                            },
+                            680: {
+                                slidesPerView: 2
+                            },
+                            991: {
+                                slidesPerView: 3
+                            },
+                            1276: {
+                                slidesPerView: 4
+                            }
+                        }}
                         spaceBetween={100}
                         navigation={true}
                         freeMode={true}
@@ -78,7 +91,20 @@ const Home = ({ name }) => {
                 <h2>Trending Offers</h2>
                 <div className="List">
                     <Swiper
-                        slidesPerView={'4'}
+                        breakpoints={{
+                            350: {
+                                slidesPerView: 1
+                            },
+                            680: {
+                                slidesPerView: 2
+                            },
+                            991: {
+                                slidesPerView: 3
+                            },
+                            1276: {
+                                slidesPerView: 4
+                            }
+                        }}
                         spaceBetween={100}
                         navigation={true}
                         freeMode={true}
@@ -97,9 +123,6 @@ const Home = ({ name }) => {
 
                     </Swiper>
                 </div>
-
-
-
             </div>
         </>
     )
