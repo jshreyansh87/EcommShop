@@ -22,17 +22,17 @@ const Home = ({ name }) => {
         { title: "Dresses, Tshirts,...", desc: "Only Puma, Reebok & more", price: "Min 60% Off", imgSrc: "https://rukminim1.flixcart.com/image/612/612/ktrk13k0/dress/3/4/4/l-md328-oomph-original-imag7fz5zgcv2rmc.jpeg?q=70" },
         { title: "Titan, Fastrack,...", desc: "Best Selling Styles", price: "Upto 70% Off+Extra 10%", imgSrc: "https://rukminim1.flixcart.com/image/612/612/k6l2vm80/watch/r/z/n/arrow-black-daniel-jubile-original-imafjyyhwkedgeja.jpeg?q=70" },
         { title: "Kitchen, Cookware", desc: "Best Discounts", price: "From Rs199", imgSrc: "https://rukminim1.flixcart.com/image/612/612/krjjde80/chopper/v/j/n/900-ml-big-chopper-gopi-original-imag5b7pgck66bxa.jpeg?q=70" },
-        { title: "Sport Shoes", desc: "Men's Casual Shoes", price: "Under Rs599", imgSrc: "https://rukminim1.flixcart.com/image/880/1056/kqv8vww0/shoe/u/r/q/10-capsnew-10-hotstyle-black-black-original-imag4s3fkbpjzvfx.jpeg?q=50" },
-        { title: "Stylish Sunglasses", desc: "Grab the Best Deals", price: "Under Rs599+Upto 10% Off", imgSrc: "https://rukminim1.flixcart.com/image/612/612/kwnv6a80/sunglass/h/i/t/polarized-sports-outdoor-activities-sunglass-m-rozzetta-craft-original-imag9afqw3rs4zwq.jpeg?q=70" },
-        { title: "Laptops", desc: "Only for Today", price: "Upto Rs33000 Off", imgSrc: "https://m.media-amazon.com/images/I/71Ncb6z2gfL._AC_UL480_FMwebp_QL65_.jpg" },
-        { title: "Earbuds", desc: "Special Offer", price: "Upto 70% Off", imgSrc: "https://www.pngitem.com/pimgs/m/99-995221_true-wireless-earbuds-gadget-hd-png-download.png" },
+        { title: "Sport Shoes", desc: "Men's Casual Shoes", price: "Under Rs599", imgSrc: "https://5.imimg.com/data5/CI/DI/GY/SELLER-32493408/00-500x500.jpg" },
+        { title: "Stylish Sunglasses", desc: "Grab the Best Deals", price: "Under Rs599+Upto 10% Off", imgSrc: "https://image.made-in-china.com/202f0j00ebAfrchICkqY/Male-Flat-Top-Sunglasses-Men-Brand-Black-Square-Shades-UV400-Gradient-Sun-Glasses-for-Men-Cool-One-Piece-Designer.jpg" },
+        { title: "Laptops", desc: "Only for Today", price: "Upto Rs33000 Off", imgSrc: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80" },
+        { title: "Earbuds", desc: "Special Offer", price: "Upto 70% Off", imgSrc: "https://skdy-assets.s3.amazonaws.com/e0de2f0e9ea7b3d827f7d6ef2f1b0ebc6dcf1e6c26fb90287978ccc95dccab3b.jpg" },
     ]
 
     const TrendingOffers = [
         { title: "Men's Tshirts", desc: "Hurry Don't Miss Out", price: "Extra 5% Off", imgSrc: "https://rukminim1.flixcart.com/image/580/696/l2urv680/t-shirt/m/o/x/l-hood-spray-black-smartees-original-image3nnagm2cna8.jpeg?q=50" },
-        { title: "Women's Gowns", desc: "What are you waiting for?", price: "Extra 10% Off", imgSrc: "https://rukminim1.flixcart.com/image/580/696/kt4ozgw0/gown/n/d/x/15-free-full-sleeve-semi-stitched-pink-maisha-kedar-fab-30-original-imag6ju99f3f3bge.jpeg?q=50" },
+        { title: "Women's Gowns", desc: "What are you waiting for?", price: "Extra 10% Off", imgSrc: "https://5.imimg.com/data5/ZA/XK/YI/ANDROID-80076263/product-jpeg-500x500.jpg" },
         { title: "Slippers & Flip Flops", desc: "Explore now", price: "Extra 10% Off", imgSrc: "https://rukminim1.flixcart.com/image/580/696/l0pm3680/slipper-flip-flop/x/t/d/5-fmf-10-black-footox-black-original-imagcfs5vfcgq7yu.jpeg?q=50" },
-        { title: "Sandals & Floaters", desc: "Great Savings", price: "Extra 5% Off", imgSrc: "https://rukminim1.flixcart.com/image/580/696/l2urv680/sandal/i/b/b/6-192-sndl-black-40-bruton-black-original-image3x2hha3cjuz.jpeg?q=50" },
+        { title: "Sandals & Floaters", desc: "Great Savings", price: "Extra 5% Off", imgSrc: "https://freepngimg.com/thumb/sandal/28078-7-ladies-sandal-transparent-background.png" },
     ]
 
     return (

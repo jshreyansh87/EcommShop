@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from './Components/Utils/Navbar';
 import Home from './Components/Home';
+import Cart from './Components/Cart';
 import Footer from './Components/Utils/Footer';
 
 import "swiper/css";
@@ -19,9 +20,9 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='about' element={<Home name={"Display About"} />} />
+        <Route path='about' element={<Home name="Display About" />} />
         <Route path='wishlist' element={<Home name="Display Wishlist" />} />
-        <Route path='cart' element={<Home name="Display Cart" />} />
+        <Route path='cart' element={<Cart /> } />
         <Route path='profile' element={<Home name="Display Profile" />} />
       </Routes>
 
