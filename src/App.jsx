@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import ProductView from './Components/ProductView';
 
 function App() {
   return (
@@ -20,7 +21,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='about' element={<Home name="Display About" />} />
+        
+        {/* Update all the routes here */}
+
+        <Route path='about' element={<ProductView />} />
         <Route path='wishlist' element={<Home name="Display Wishlist" />} />
         <Route path='cart' element={<Cart /> } />
         <Route path='profile' element={<Home name="Display Profile" />} />

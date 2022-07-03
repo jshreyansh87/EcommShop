@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   max-height: 100vh;
+  font-family: 'Poppins', sans-serif;
   /* changes here */
 }
 
@@ -224,6 +227,8 @@
 /*  ------------------- Footer -------------------  */
 
 .Footer {
+  /* position: relative;
+  bottom: 0; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -747,4 +752,140 @@
   opacity: 1;
   margin-top: -40px;
   transition-delay: 0.3s;
+}
+
+/*  ------------------- Product Details Page -------------------  */
+
+.ProductView {
+  position: relative;
+  margin: 8% 0;
+  height: 90vh;
+  width: 100%;
+  padding: 30px;
+}
+
+.ProductView .ProductWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+  max-height: 90vh;
+  box-shadow: 2px 2px 20px 5px rgba(167, 167, 167, 0.5);
+}
+
+.ProductView .ProductWrapper .ProductImageView {
+  height: 70vh;
+  width: 40vw;
+  /* object-fit: contain; */
+}
+
+.ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns {
+  display: flex;
+  margin: 10px 5px;
+  justify-content: space-evenly;
+}
+
+.ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns Button {
+  height: 3rem;
+  width: 15rem;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+  border-radius: 5%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns .AddToCart {
+  background: #ff9f00;
+}
+
+.ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns .BuyNow {
+  background: #fb641b;
+}
+
+.ProductView .ProductWrapper .ProductImageView .swiper {
+  width: 90%;
+  height: 90%;
+}
+
+.ProductView .ProductWrapper .ProductImageView .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.ProductView .ProductWrapper .ProductImageView .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ProductView .ProductWrapper .ProductContent {
+  height: 70vh;
+  width: 40vw;
+  overflow: scroll;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductBrand {
+  color: #878787;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductPrice {
+  display: flex;
+  align-items: center;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductPrice .NewPrice {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductPrice .OldPrice {
+  color: #878787;
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductPrice .Offer {
+  color: #26a541;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductDetail {
+  padding: 10px;
+}
+
+.ProductView .ProductWrapper .ProductContent .ProductDetail ul {
+  list-style: none;
 }
