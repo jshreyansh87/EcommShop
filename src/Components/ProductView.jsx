@@ -9,7 +9,7 @@ import FlashOnIcon from '@mui/icons-material/FlashOn';
 
 const ProductView = () => {
 
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [activeThumb, setActiveThumb] = useState()
 
   return (
     <div className='ProductView'>
@@ -17,15 +17,10 @@ const ProductView = () => {
         <div className="ProductImageView">
 
           <Swiper
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
+            thumbs={{ swiper: activeThumb && !activeThumb.destroyed ? activeThumb : null }}
             spaceBetween={10}
-            navigation={true}
-            thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
+            modules={[FreeMode, Thumbs]}
+            className="product-images-slider"
           >
             <SwiperSlide>
               <img src="https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg" />
@@ -35,6 +30,33 @@ const ProductView = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img src="https://img.joomcdn.net/72972a62562a277ba3e0349e69b81cc8b7ae0962_original.jpeg" />
+            </SwiperSlide>
+          </Swiper>
+
+          <Swiper
+            onSwiper={setActiveThumb}
+            // loop={true}
+            // direction={"vertical"}
+            navigation={true}
+            spaceBetween={10}
+            slidesPerView={3}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="product-images-slider-thumbs"
+          >
+            <SwiperSlide>
+              <div className="product-images-slider-thumbs-wrapper">
+                <img src="https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="product-images-slider-thumbs-wrapper">
+                <img src="https://cdn.fashiola.in/L84863407/afrojack-men-black-printed-sneakers.jpg" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="product-images-slider-thumbs-wrapper">
+                <img src="https://img.joomcdn.net/72972a62562a277ba3e0349e69b81cc8b7ae0962_original.jpeg" />
+              </div>
             </SwiperSlide>
           </Swiper>
 
@@ -54,7 +76,7 @@ const ProductView = () => {
             <p className="OldPrice">₹499</p>
             <p className="Offer">50% off</p>
           </div>
-          
+
           <br /> <hr /> <br />
           <div className="ProductDetail">
             <h2>Product Details </h2>
