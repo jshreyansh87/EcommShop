@@ -793,7 +793,7 @@
 
 .ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns Button {
   height: 3rem;
-  width: 15rem;
+  width: 45%;
   color: #fff;
   font-size: 1.2rem;
   border: none;
@@ -844,10 +844,10 @@
 }
 
 .ProductView .ProductWrapper .ProductImageView .product-images-slider-thumbs {
-  width: 80%;
-  height: 20%;
+  width: 60%;
+  height: 10%;
   position: absolute;
-  margin: 5% 10%;
+  margin: 5% 20%;
 }
 
 .ProductView .ProductWrapper .ProductImageView .product-images-slider-thumbs .swiper-slide {
@@ -927,4 +927,65 @@
 
 .ProductView .ProductWrapper .ProductContent .ProductDetail ul {
   list-style: none;
+}
+
+@media (max-width: 991px) {
+  .ProductView .ProductWrapper .ProductImageView .product-images-slider{
+    width: 100%;
+    height: 50%;
+  }
+
+  .ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns {
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 771px) {
+  body::-webkit-scrollbar{
+    display: none;
+  }
+
+  .ProductView .ProductWrapper {
+    min-height: 100%;
+    width: 100%;
+  }
+
+  .ProductView .ProductWrapper .ProductImageView {
+    width: 100%;
+    height: 45%;
+  }
+
+  .ProductView .ProductWrapper .ProductImageView .product-images-slider {
+    width: 100%;
+    height: 70%;
+  }
+
+  .ProductView .ProductWrapper .ProductImageView .product-images-slider-thumbs {
+    display: none;
+  }
+
+  .ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns {
+    position: absolute;
+    min-height: 20%;
+    width: 80%;
+    bottom: 0;
+    margin: 10px 10%;
+  }
+
+  .ProductView .ProductWrapper .ProductContent {
+    width: 100%;
+    height: 55%;
+  }
+
+  .ProductView .ProductWrapper .ProductContent::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+@media (max-width: 551px) {
+  .ProductView .ProductWrapper .ProductImageView .BuyAndCartBtns {
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
 }

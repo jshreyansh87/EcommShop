@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Pagination, Thumbs } from "swiper";
 
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
@@ -19,7 +19,7 @@ const ProductView = () => {
           <Swiper
             thumbs={{ swiper: activeThumb && !activeThumb.destroyed ? activeThumb : null }}
             spaceBetween={10}
-            modules={[FreeMode, Thumbs]}
+            modules={[FreeMode, Thumbs, Pagination]}
             className="product-images-slider"
           >
             <SwiperSlide>
@@ -35,8 +35,6 @@ const ProductView = () => {
 
           <Swiper
             onSwiper={setActiveThumb}
-            // loop={true}
-            // direction={"vertical"}
             navigation={true}
             spaceBetween={10}
             slidesPerView={3}
