@@ -5,7 +5,6 @@ import ProductListCard from './Cards/ProductListCard'
 const ProductList = () => {
 
   const allProducts = useAllProducts();
-  // console.log(allProducts);
 
   return (
     <div className="ProductListBody">
@@ -13,10 +12,9 @@ const ProductList = () => {
 
         {
           allProducts.map((item, i) => (
-            <ProductListCard key={i} title={item.productName} brand={item.productBrand} currentPrice={item.currentPrice} prevPrice={item.prevPrice} offer={item.offer} imageUrl={item.images[0]} />
+            <ProductListCard key={i} id={item.id} title={item.productName} brand={item.productBrand} currentPrice={item.currentPrice} prevPrice={item.prevPrice} offer={item.offer} imageUrl={item.images[0]} />
           ))
         }
-
 
       </div>
     </div>
