@@ -1012,7 +1012,9 @@
   padding: 40px 0;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard {
+/*  ------------------- Product List Card -------------------  */
+
+.ProductListCard {
   position: relative;
   width: 320px;
   height: 440px;
@@ -1024,7 +1026,7 @@
   margin: 30px;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox {
+.ProductListCard .ProductListBox {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -1039,13 +1041,13 @@
   transition: 0.5s;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard:hover .ProductListBox {
+.ProductListCard:hover .ProductListBox {
   transform: translateY(-50px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   background: linear-gradient(45deg, #b95ce4, #4f29cd);
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductCoverImage {
+.ProductListCard .ProductListBox .ProductCoverImage {
   /* background: red; */
   height: 50%;
   width: 100%;
@@ -1056,7 +1058,7 @@
   text-align: center;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductCoverImage img {
+.ProductListCard .ProductListBox .ProductCoverImage img {
   position: relative;
   bottom: 0;
   width: 95%;
@@ -1064,7 +1066,7 @@
   object-fit: contain;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductListContent {
+.ProductListCard .ProductListBox .ProductListContent {
   padding: 20px;
   text-align: center;
   position: absolute;
@@ -1072,7 +1074,7 @@
   bottom: 0;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductListContent h2 {
+.ProductListCard .ProductListBox .ProductListContent h2 {
   position: absolute;
   top: -15px;
   margin-left: 5%;
@@ -1082,23 +1084,23 @@
   transition: 0.5s;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard:hover .ProductListBox .ProductListContent h2 {
+.ProductListCard:hover .ProductListBox .ProductListContent h2 {
   color: rgba(0, 0, 0, 0.25);
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductListContent h3 {
+.ProductListCard .ProductListBox .ProductListContent h3 {
   font-size: 1.8em;
   color: #777;
   z-index: 1;
   transition: 0.5s;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard:hover .ProductListBox .ProductListContent h3,
-.ProductListBody .ProductListContainer .ProductListCard:hover .ProductListBox .ProductListContent p {
+.ProductListCard:hover .ProductListBox .ProductListContent h3,
+.ProductListCard:hover .ProductListBox .ProductListContent p {
   color: #fff;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductListContent p {
+.ProductListCard .ProductListBox .ProductListContent p {
   font-size: 1em;
   font-weight: 300;
   color: #777;
@@ -1106,7 +1108,7 @@
   transition: 0.5s;
 }
 
-.ProductListBody .ProductListContainer .ProductListCard .ProductListBox .ProductListContent a {
+.ProductListCard .ProductListBox .ProductListContent a {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -1119,6 +1121,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.ProductListBody .ProductListContainer .ProductListCard:hover .ProductListBox .ProductListContent a {
+.ProductListCard:hover .ProductListBox .ProductListContent a {
   background: #ff568f;
 }

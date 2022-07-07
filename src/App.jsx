@@ -12,27 +12,32 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import { AllProductProvider } from './Context/AllProductContext';
 
 function App() {
   return (
 
-    <div className='App'>
+    <AllProductProvider>
 
-      <Navbar />
+      <div className='App'>
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        
-        {/* Update all the routes here */}
+        <Navbar />
 
-        <Route path='about' element={<ProductList />} />
-        <Route path='wishlist' element={<Home name="Display Wishlist" />} />
-        <Route path='cart' element={<Cart /> } />
-        <Route path='profile' element={<Home name="Display Profile" />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
 
-      <Footer />
-    </div>
+          {/* Update all the routes here */}
+
+          <Route path='about' element={<ProductList />} />
+          <Route path='wishlist' element={<Home name="Display Wishlist" />} />
+          <Route path='cart' element={<Cart />} />
+          <Route path='profile' element={<Home name="Display Profile" />} />
+        </Routes>
+
+        <Footer />
+      </div>
+
+    </AllProductProvider>
 
   );
 }
