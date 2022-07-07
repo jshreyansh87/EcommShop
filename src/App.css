@@ -1018,6 +1018,7 @@
   position: relative;
   width: 320px;
   height: 440px;
+  /* min-height: max-content; */
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
     inset -5px -5px 5px rgba(255, 255, 255, 0.5),
     5px 5px 5px rgba(0, 0, 0, 0.05),
@@ -1096,16 +1097,40 @@
 }
 
 .ProductListCard:hover .ProductListBox .ProductListContent h3,
-.ProductListCard:hover .ProductListBox .ProductListContent p {
+.ProductListCard:hover .ProductListBox .ProductListContent .ProductPriceHolder .CurrentPrice,
+.ProductListCard:hover .ProductListBox .ProductListContent .ProductPriceHolder .PrevPrice,
+.ProductListCard:hover .ProductListBox .ProductListContent .ProductPriceHolder .CurrentOffer {
   color: #fff;
 }
 
 .ProductListCard .ProductListBox .ProductListContent p {
-  font-size: 1em;
-  font-weight: 300;
-  color: #777;
   z-index: 1;
   transition: 0.5s;
+}
+
+.ProductListCard .ProductListBox .ProductListContent .ProductPriceHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ProductListCard .ProductListBox .ProductListContent .ProductPriceHolder .CurrentPrice {
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #777;
+}
+
+.ProductListCard .ProductListBox .ProductListContent .ProductPriceHolder .PrevPrice {
+  font-size: 1.1em;
+  font-weight: 250;
+  text-decoration: line-through;
+  color: #777;
+}
+
+.ProductListCard .ProductListBox .ProductListContent .ProductPriceHolder .CurrentOffer {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(31, 190, 3);
 }
 
 .ProductListCard .ProductListBox .ProductListContent a {
