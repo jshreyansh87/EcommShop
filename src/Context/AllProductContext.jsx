@@ -9,13 +9,19 @@ export function useAllProducts() {
 export function AllProductProvider({ children }) {
 
     const productData = [
-        { title: "Mobile", body: "View Mobile", imgSrc: "https://mobilemall.pk/blog/wp-content/uploads/2022/03/Galaxy-A-series-phones-2022.webp" },
-        { title: "Home Appliances", body: "View Electronics", imgSrc: "https://media.istockphoto.com/photos/home-appliancess-set-of-household-kitchen-technics-in-the-new-or-picture-id952839420?k=20&m=952839420&s=612x612&w=0&h=W1YiB_4DuiBFQVAUPlPY2ynLpVHzocKKtf6Vp22CwjM=" },
-        { title: "Fashion", body: "View Fashion", imgSrc: "https://media.gq.com/photos/5ab151dcd668df704470b18f/master/w_1600%2Cc_limit/Not-Normal-High-Fashion-Gets-Serious-About-Regular-Clothes-20-Edit.jpg" },
-        { title: "Sports and Fitness", body: "View Shoes", imgSrc: "https://d1spvtuqt6rmhv.cloudfront.net/images/_large/Pro-Performace-Fitness-Equipment-Solutions-Keiser.jpg" },
-        { title: "Groceries", body: "View Grocery", imgSrc: "https://www.verywellfit.com/thmb/Hvinc8CbEn8VEv7HSeH_SmbWTMQ=/3437x2578/smart/filters:no_upscale()/grocery-basket_Dan-Dalton-56a2c9de3df78cf77279f4da.jpg" },
-        { title: "Books", body: "View Books", imgSrc: "https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip" },
-        { title: "Gaming", body: "View Gaming", imgSrc: "https://www.lifewire.com/thmb/Z81WJAozspN0t1duIsx5g24u-AE=/1333x1000/smart/filters:no_upscale()/SonyPlaystation53-3e7bb6aed29740ad9a28ac58692e7176.jpg" },
+        {
+            id: "1",
+            productName: "Running Shoes For Men (Black)",
+            productBrand: "hotstyle",
+            category: "sports",
+            itemType: "shoes",
+            currentPrice: "₹247",
+            prevPrice: "₹499",
+            offer: "50%",
+            productDetails: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi magnam sapiente tempora excepturi minus alias praesentium quam, iste mollitia! Mollitia minima optio ad libero molestias voluptatem ducimus vero! Consequuntur veniam facilis perspiciatis? Itaque, qui?",
+            specs: {"Color":"Black", "Outer Material":"Canvas", "Ideal for":"Sports", "Sole Material":"PVC", "Closure":"Lace-Ups", "Upper Pattern":"Woven Design", "Pack of":"1"},
+            images: ["https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg", "https://cdn.fashiola.in/L84863407/afrojack-men-black-printed-sneakers.jpg", "https://img.joomcdn.net/72972a62562a277ba3e0349e69b81cc8b7ae0962_original.jpeg"]
+        },
     ]
 
     return (
