@@ -6,7 +6,7 @@ import Navbar from './Components/Utils/Navbar';
 import Home from './Components/Home';
 import Cart from './Components/Cart';
 import Footer from './Components/Utils/Footer';
-import ProductView from './Components/ProductView';
+import ProductDetailsPage from './Components/ProductDetailsPage';
 import ProductList from './Components/ProductList';
 import { AllProductProvider } from './Context/AllProductContext';
 
@@ -38,7 +38,7 @@ function App() {
           {/* Update all the routes here */}
 
           <Route path='products' element={<ProductList />} />
-          <Route path="product/:productId" element={<ProductView />} />
+          <Route path="product/:productId" element={<ProductDetailsPage />} />
           <Route path='wishlist' element={<Home name="Display Wishlist" />} />
           <Route path='cart' element={<Cart />} />
           <Route path='profile' element={<Home name="Display Profile" />} />

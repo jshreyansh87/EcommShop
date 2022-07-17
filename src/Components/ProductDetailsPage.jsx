@@ -8,15 +8,17 @@ import { FreeMode, Navigation, Pagination, Thumbs } from "swiper";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 
-const ProductView = () => {
+const ProductDetailsPage = () => {
   let params = useParams();
   const allProducts = useAllProducts();
-  const currentProduct = allProducts[params.productId - 1];
+  const currentProduct = allProducts.find((product) => {
+    return product.id === params.productId
+  })
 
   const [activeThumb, setActiveThumb] = useState();
 
   return (
-    <div className='ProductView'>
+    <div className='ProductDetailsPage'>
       <div className="ProductWrapper">
         <div className="ProductImageView">
 
@@ -27,18 +29,13 @@ const ProductView = () => {
             className="product-images-slider"
           >
 
-            {/* <SwiperSlide>
-              <img src={currentProduct.images[0]} />
-            </SwiperSlide> */}
-            <SwiperSlide>
-              <img src="https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://cdn.fashiola.in/L84863407/afrojack-men-black-printed-sneakers.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://img.joomcdn.net/72972a62562a277ba3e0349e69b81cc8b7ae0962_original.jpeg" />
-            </SwiperSlide>
+            {
+              currentProduct.images.map((image, i) => (
+                <SwiperSlide key={i}>
+                  <img src={image} />
+                </SwiperSlide>
+              ))
+            }
 
           </Swiper>
 
@@ -50,21 +47,14 @@ const ProductView = () => {
             modules={[FreeMode, Navigation, Thumbs]}
             className="product-images-slider-thumbs"
           >
-            <SwiperSlide>
-              <div className="product-images-slider-thumbs-wrapper">
-                <img src="https://m.media-amazon.com/images/I/81i057rz8gS._UL1500_.jpg" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="product-images-slider-thumbs-wrapper">
-                <img src="https://cdn.fashiola.in/L84863407/afrojack-men-black-printed-sneakers.jpg" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="product-images-slider-thumbs-wrapper">
-                <img src="https://img.joomcdn.net/72972a62562a277ba3e0349e69b81cc8b7ae0962_original.jpeg" />
-              </div>
-            </SwiperSlide>
+
+            {
+              currentProduct.images.map((image, i) => (
+                <SwiperSlide key={i}>
+                  <img src={image} />
+                </SwiperSlide>
+              ))
+            }
 
           </Swiper>
 
@@ -92,20 +82,12 @@ const ProductView = () => {
             <p> {currentProduct.productDetails} </p>
 
             <ul>
-              <li>Color - <span>Black</span></li>
-              <li>Outer material - <span>Canvas</span></li>
-              <li>Ideal for - <span>Men</span></li>
-              <li>Occasion - <span>Sports</span></li>
-              <li>Sole Material - <span>PVC</span></li>
-              <li>Closure - <span>Lace-Ups</span></li>
-              <li>Upper Pattern - <span>Woven Design</span></li>
-              <li>Pack of - <span>1</span></li>
 
-              {/* {
-                currentProduct.specs.map((item, i) => (
-                  <li>Color - <span>Black</span></li>
+              {
+                Object.entries(currentProduct.specs).map((specPair, i) => (
+                  <li key={i}>{specPair[0]} - <span>{specPair[1]}</span></li>
                 ))
-              } */}
+              }
 
             </ul>
           </div>
@@ -117,4 +99,4 @@ const ProductView = () => {
   )
 }
 
-export default ProductView
+export default ProductDetailsPage
